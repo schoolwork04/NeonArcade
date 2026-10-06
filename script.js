@@ -1809,6 +1809,21 @@
       quiz: launchQuiz,
       ballshot: launchBallShoot
     };
-// =======================
-// EXTRA GAMES
-// =======================
+// launcher mapping
+var LAUNCHERS = {
+  snake: launchSnake,
+  breakout: launchBreakout,
+  tictac: launchTicTac,
+  flappy: launchFlappy,
+  memory: launchMemory,
+  pong: launchPong,
+  g2048: launch2048,
+  mines: launchMinesweeper,
+  typing: launchTyping,
+  simon: launchSimon,
+  wordle: launchWordle,
+  dino: launchDino,
+  tetris: launchTetris,
+  quiz: launchQuiz,
+  ballshot: launchBallShoot
+};
