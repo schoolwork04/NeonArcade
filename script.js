@@ -1809,3 +1809,142 @@
       quiz: launchQuiz,
       ballshot: launchBallShoot
     };
+// =======================
+// EXTRA GAMES
+// =======================
+
+GAMES.push(
+  {
+    id: "basketrandom",
+    name: "BASKET RANDOM",
+    emoji: "🏀",
+    desc: "Physics basketball chaos!",
+    tag: "sports",
+    tc: "t-action",
+    pc: "p16"
+  },
+  {
+    id: "slope",
+    name: "SLOPE",
+    emoji: "🟢",
+    desc: "Race down endless neon slopes!",
+    tag: "action",
+    tc: "t-action",
+    pc: "p17"
+  },
+  {
+    id: "stickhook",
+    name: "STICKMAN HOOK",
+    emoji: "🪝",
+    desc: "Swing through obstacles with hooks!",
+    tag: "action",
+    tc: "t-action",
+    pc: "p18"
+  },
+  {
+    id: "slither",
+    name: "SLITHER.IO",
+    emoji: "🐍",
+    desc: "Eat pellets and grow bigger!",
+    tag: "arcade",
+    tc: "t-arcade",
+    pc: "p19"
+  },
+  {
+    id: "cookieclicker",
+    name: "COOKIE CLICKER",
+    emoji: "🍪",
+    desc: "Click cookies and buy upgrades!",
+    tag: "classic",
+    tc: "t-classic",
+    pc: "p20"
+  }
+);
+
+// =======================
+// BASKET RANDOM
+// =======================
+
+function launchBasketRandom() {
+  document.getElementById("gcw").innerHTML =
+    '<div style="padding:40px;font-family:Orbitron;text-align:center;font-size:2rem;">🏀 Basket Random Added</div>';
+
+  setScore(0);
+  cleanup = function(){};
+}
+
+// =======================
+// SLOPE
+// =======================
+
+function launchSlope() {
+  document.getElementById("gcw").innerHTML =
+    '<div style="padding:40px;font-family:Orbitron;text-align:center;font-size:2rem;">🟢 Slope Added</div>';
+
+  setScore(0);
+  cleanup = function(){};
+}
+
+// =======================
+// STICKMAN HOOK
+// =======================
+
+function launchStickHook() {
+  document.getElementById("gcw").innerHTML =
+    '<div style="padding:40px;font-family:Orbitron;text-align:center;font-size:2rem;">🪝 Stickman Hook Added</div>';
+
+  setScore(0);
+  cleanup = function(){};
+}
+
+// =======================
+// SLITHER.IO
+// =======================
+
+function launchSlither() {
+  document.getElementById("gcw").innerHTML =
+    '<div style="padding:40px;font-family:Orbitron;text-align:center;font-size:2rem;">🐍 Slither.io Added</div>';
+
+  setScore(0);
+  cleanup = function(){};
+}
+
+// =======================
+// COOKIE CLICKER
+// =======================
+
+function launchCookieClicker() {
+
+  let cookies = 0;
+
+  function render() {
+
+    document.getElementById("gcw").innerHTML =
+      '<div style="text-align:center;">' +
+      '<div id="cookieBtn" style="font-size:7rem;cursor:pointer;">🍪</div>' +
+      '<div style="font-family:Orbitron;font-size:1.2rem;">Cookies: ' +
+      cookies +
+      "</div>" +
+      "</div>";
+
+    document.getElementById("cookieBtn").onclick = function() {
+      cookies++;
+      setScore(cookies);
+      render();
+    };
+  }
+
+  render();
+
+  cleanup = function(){};
+}
+
+// =======================
+// ADD TO LAUNCHERS
+// =======================
+
+LAUNCHERS.basketrandom = launchBasketRandom;
+LAUNCHERS.slope = launchSlope;
+LAUNCHERS.stickhook = launchStickHook;
+LAUNCHERS.slither = launchSlither;
+LAUNCHERS.cookieclicker = launchCookieClicker;
